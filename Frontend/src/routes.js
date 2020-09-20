@@ -22,6 +22,7 @@ import Register from "./views/examples/Register";
 import Login from "./views/examples/Login";
 import Tables from "./views/examples/Tables";
 import Icons from "./views/examples/Icons";
+import Beneficiary from './views/Beneficiary';
 
 var routes = [
   {
@@ -29,6 +30,13 @@ var routes = [
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
+    layout: "/admin"
+  },
+  {
+    path: "/beneficiary",
+    name: "Beneficiary",
+    icon: "ni ni-tv-2 text-primary",
+    component: Beneficiary,
     layout: "/admin"
   },
   {

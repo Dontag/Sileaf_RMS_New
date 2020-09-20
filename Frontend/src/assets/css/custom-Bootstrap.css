@@ -22,6 +22,10 @@ border-radius: 1rem !important;
     border-radius: 3rem !important;
 }
 
+.br-xxl{
+    border-radius: 12rem !important;
+}
+
 .bg-linear-Prime{
     background: linear-gradient(87deg, #648fce 0, #355baf 100%) !important;
 }
@@ -57,4 +61,67 @@ border-radius: 1rem !important;
 .disable-hover, .txt-dark:hover{
     text-decoration: none !important;
     color: unset !important;
+}
+
+.o-hidden{
+    overflow: hidden !important;
+}
+
+.o-scroll{
+    overflow: scroll !important;
+}
+
+.pad-1{
+    padding: 1px !important;
+}
+
+.pad-2{
+    padding: 2px !important;
+}
+
+.pad-5{
+    padding: 5px !important;
+}
+
+.pad-10{
+    padding: 10px !important;
+}
+
+.pad-12{
+    padding: 12px !important;
+}
+
+.pad-15{
+    padding: 15px !important;
+}
+
+.pad-20{
+    padding: 20px !important;
+}
+
+.rounded-circle-sm{
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+}
+
+.rounded-circle-m{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 30px !important;
+}
+
+.rounded-circle-ml{
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 35px !important;
+}
+
+.logo-h-w-m{
+    width: 150px !important;
+    height: 200px !important;
+}
+.logo-h-w-s{
+    width: 85px !important;
+    height: 100px !important;
 }

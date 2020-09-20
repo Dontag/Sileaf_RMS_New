@@ -32,7 +32,8 @@ import {
   Navbar,
   Nav,
   Container,
-  Media
+  Media,
+  Row,
 } from "reactstrap";
 
 class AdminNavbar extends React.Component {
@@ -41,12 +42,19 @@ class AdminNavbar extends React.Component {
       <>
         <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
           <Container fluid>
-            <Link
-              className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-              to="/"
-            >
-              {this.props.brandText}
-            </Link>
+            <Row>
+              <Link
+                className="h5 mb-0 text-secondary text-uppercase d-none d-lg-inline-block"
+                to="/"
+              >
+                <h3 className="h3 font-weight-bold text-overflow m-0">
+                  SOLAR WATER PUMP <br />
+                  REMOTE MONITORING SYSTEM
+                 </h3>
+
+                {this.props.brandText}
+              </Link>
+            </Row>
             <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
               <FormGroup className="mb-0">
                 <InputGroup className="input-group-alternative">
