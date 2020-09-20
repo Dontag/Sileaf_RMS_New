@@ -102,6 +102,30 @@ class Header extends React.Component {
                     </CardBody>
                   </Card>
                 </Col>
+                <Col lg="6" xl="3">
+                  <Card className="card-stats mb-4 mb-xl-0">
+                    <CardBody>
+                      <Row>
+                        <Col>
+                          {/* Conditions to change the state */}
+                          <Row className="align-items-center d-flex justify-content-center">
+                            <span className="h4 text-uppercase text-dark font-weight-bold  mt-2 ">
+                            CUMULATIVE LPD - 20000  
+                          </span>
+                          </Row>
+                          <Row className="align-items-center d-flex justify-content-center">
+                            <span className=" h4 text-uppercase text-dark font-weight-bold  mt-3">
+                            current LPM - 20 
+                          </span>
+                          </Row>
+                        </Col>
+                      </Row>
+                      {/* <span className="h4 text-uppercase font-weight-bold mb-0 br-xxl bg-success p-2">
+                        on
+                      </span> */}
+                    </CardBody>
+                  </Card>
+                </Col>
               </Row>
             </div>
           </Container>

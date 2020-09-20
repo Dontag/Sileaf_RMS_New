@@ -72,48 +72,103 @@ class Beneficiary extends React.Component {
     render() {
         return (
             <>
-                <Header Image1={Pump_off}/>
+                <Header Image1={Pump_off} />
                 {/* Page content */}
                 <Container className="mt--7" fluid>
                     <Row>
-                        <Col className="mb-5 mb-xl-0" xl="8">
+                        <Col className="mb-5 mb-xl-0" xl="4">
                             <Card className="bg-gradient-default shadow">
                                 <CardHeader className="bg-transparent">
-                                    <Row className="align-items-center">
+                                    <Row className="align-items-center ">
                                         <div className="col">
-                                            <h6 className="text-uppercase text-light ls-1 mb-1">
-                                                Overview
-                      </h6>
-                                            <h2 className="text-white mb-0">Sales value</h2>
+                                            <h2 className="text-white mb-0">Voltage</h2>
                                         </div>
                                         <div className="col">
-                                            <Nav className="justify-content-end" pills>
-                                                <NavItem>
-                                                    <NavLink
-                                                        className={classnames("py-2 px-3", {
-                                                            active: this.state.activeNav === 1
-                                                        })}
-                                                        href="#pablo"
-                                                        onClick={e => this.toggleNavs(e, 1)}
-                                                    >
-                                                        <span className="d-none d-md-block">Month</span>
-                                                        <span className="d-md-none">M</span>
-                                                    </NavLink>
-                                                </NavItem>
-                                                <NavItem>
-                                                    <NavLink
-                                                        className={classnames("py-2 px-3", {
-                                                            active: this.state.activeNav === 2
-                                                        })}
-                                                        data-toggle="tab"
-                                                        href="#pablo"
-                                                        onClick={e => this.toggleNavs(e, 2)}
-                                                    >
-                                                        <span className="d-none d-md-block">Week</span>
-                                                        <span className="d-md-none">W</span>
-                                                    </NavLink>
-                                                </NavItem>
-                                            </Nav>
+                                            <Row className="justify-content-around align-items-center">
+
+                                                <Nav className="justify-content-around align-items-center" pills>
+                                                    <NavItem>
+                                                        <NavLink
+                                                            className={classnames("py-2 px-3", {
+                                                                active: this.state.activeNav === 1
+                                                            })}
+                                                            href="#pablo"
+                                                            onClick={e => this.toggleNavs(e, 1)}
+                                                        >
+                                                            <span className="d-none d-md-block">Month</span>
+                                                            <span className="d-md-none">M</span>
+                                                        </NavLink>
+                                                    </NavItem>
+                                                    <NavItem>
+                                                        <NavLink
+                                                            className={classnames("py-2 px-3", {
+                                                                active: this.state.activeNav === 2
+                                                            })}
+                                                            data-toggle="tab"
+                                                            href="#pablo"
+                                                            onClick={e => this.toggleNavs(e, 2)}
+                                                        >
+                                                            <span className="d-none d-md-block">Week</span>
+                                                            <span className="d-md-none">W</span>
+                                                        </NavLink>
+                                                    </NavItem>
+                                                </Nav>
+                                            </Row>
+
+                                        </div>
+                                    </Row>
+                                </CardHeader>
+                                <CardBody>
+                                    {/* Chart */}
+                                    <div className="chart">
+                                        <Line
+                                            data={chartExample1[this.state.chartExample1Data]}
+                                            options={chartExample1.options}
+                                            getDatasetAtEvent={e => console.log(e)}
+                                        />
+                                    </div>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col className="mb-5 mb-xl-0" xl="4">
+                            <Card className="bg-gradient-default shadow">
+                                <CardHeader className="bg-transparent">
+                                    <Row className="align-items-center ">
+                                        <div className="col">
+                                            <h2 className="text-white mb-0">Current</h2>
+                                        </div>
+                                        <div className="col">
+                                            <Row className="justify-content-around align-items-center">
+
+                                                <Nav className="justify-content-around align-items-center" pills>
+                                                    <NavItem>
+                                                        <NavLink
+                                                            className={classnames("py-2 px-3", {
+                                                                active: this.state.activeNav === 1
+                                                            })}
+                                                            href="#pablo"
+                                                            onClick={e => this.toggleNavs(e, 1)}
+                                                        >
+                                                            <span className="d-none d-md-block">Month</span>
+                                                            <span className="d-md-none">M</span>
+                                                        </NavLink>
+                                                    </NavItem>
+                                                    <NavItem>
+                                                        <NavLink
+                                                            className={classnames("py-2 px-3", {
+                                                                active: this.state.activeNav === 2
+                                                            })}
+                                                            data-toggle="tab"
+                                                            href="#pablo"
+                                                            onClick={e => this.toggleNavs(e, 2)}
+                                                        >
+                                                            <span className="d-none d-md-block">Week</span>
+                                                            <span className="d-md-none">W</span>
+                                                        </NavLink>
+                                                    </NavItem>
+                                                </Nav>
+                                            </Row>
+
                                         </div>
                                     </Row>
                                 </CardHeader>
@@ -136,7 +191,7 @@ class Beneficiary extends React.Component {
                                         <div className="col">
                                             <h6 className="text-uppercase text-muted ls-1 mb-1">
                                                 Performance
-                      </h6>
+                                            </h6>
                                             <h2 className="mb-0">Total orders</h2>
                                         </div>
                                     </Row>
@@ -169,7 +224,7 @@ class Beneficiary extends React.Component {
                                                 size="sm"
                                             >
                                                 See all
-                      </Button>
+                                            </Button>
                                         </div>
                                     </Row>
                                 </CardHeader>
@@ -189,8 +244,8 @@ class Beneficiary extends React.Component {
                                             <td>340</td>
                                             <td>
                                                 <i className="fas fa-arrow-up text-success mr-3" />{" "}
-                        46,53%
-                      </td>
+                                                46,53%
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">/argon/index.html</th>
@@ -198,8 +253,8 @@ class Beneficiary extends React.Component {
                                             <td>319</td>
                                             <td>
                                                 <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                        46,53%
-                      </td>
+                                                46,53%
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">/argon/charts.html</th>
@@ -207,8 +262,8 @@ class Beneficiary extends React.Component {
                                             <td>294</td>
                                             <td>
                                                 <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                        36,49%
-                      </td>
+                                                36,49%
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">/argon/tables.html</th>
@@ -216,8 +271,8 @@ class Beneficiary extends React.Component {
                                             <td>147</td>
                                             <td>
                                                 <i className="fas fa-arrow-up text-success mr-3" />{" "}
-                        50,87%
-                      </td>
+                                                50,87%
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">/argon/profile.html</th>
@@ -225,8 +280,8 @@ class Beneficiary extends React.Component {
                                             <td>190</td>
                                             <td>
                                                 <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                        46,53%
-                      </td>
+                                                46,53%
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </Table>
